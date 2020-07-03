@@ -1,0 +1,24 @@
+{
+  "name": "exel_course_js",
+  "version": "1.0.0",
+  "description": "Pure JS Excel",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mpsk8501/exelJs.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "Excel"
+  ],
+  "author": "Kirill Komarov <mpak8501@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mpsk8501/exelJs/issues"
+  },
+  "homepage": "https://github.com/Mpsk8501/exelJs#readme"
+}
