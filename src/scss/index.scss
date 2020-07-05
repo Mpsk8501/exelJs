@@ -1,9 +1,21 @@
+@import "~normalize.css";
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/fonts";
-@import "utils/reset";
+@import "utils/mixins";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
 
 
-
-@import "modules/main";
+@import "modules/excelTable/excelTable";
+@import "modules/dashboard/dashboard";
 
