@@ -1,0 +1,31 @@
+.excel{
+  position: relative;
+  color: $main-color;
+  height: 100%;
+  max-width: 100%;
+  font-size: .8rem;
+}
+
+.input{
+  margin: 0;
+  padding: 2px 7px;
+  color: $text-color;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  height: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  outline: none;
+  &:hover{
+    border: 1px solid $border-color;
+  }
+  &:focus{
+    border: 2px solid #1a73e8;
+  }
+}
+
+
+@import "header";
+@import "toolbar";
+@import "formula";
+@import "table";
