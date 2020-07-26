@@ -13,6 +13,17 @@ class Dom {
     return this.nativeEl.outerHTML.trim()
   }
 
+  text(text) {
+    if (typeof text === 'string') {
+      this.nativeEl.textContent = text
+      return this
+    }
+    if (this.nativeEl.tagName.toLowerCase() === 'input') {
+      return this.nativeEl.value.trim()
+    }
+    return this.nativeEl.textContent.trim()
+  }
+
   clear() {
     this.html('')
     return this
@@ -48,6 +59,10 @@ class Dom {
     return $(this.nativeEl.closest(selector))
   }
 
+  find(selector) {
+    return $(this.nativeEl.querySelector(selector))
+  }
+
   findAll(selector) {
     return this.nativeEl.querySelectorAll(selector)
   }
@@ -60,6 +75,31 @@ class Dom {
     Object.keys(styles).forEach(style => {
       this.nativeEl.style[style] = styles[style]
     })
+  }
+
+  addClass(className) {
+    this.nativeEl.classList.add(className)
+    return this
+  }
+
+  removeClass(className) {
+    this.nativeEl.classList.remove(className)
+    return this
+  }
+  id(parse) {
+    if (parse) {
+      const parsed = this.id().split(':')
+      return {
+        row: +parsed[0],
+        col: +parsed[1]
+      }
+    }
+    return this.data.id
+  }
+
+  focus() {
+    this.nativeEl.focus()
+    return this
   }
 }
 

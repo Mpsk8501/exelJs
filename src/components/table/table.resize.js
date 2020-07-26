@@ -10,11 +10,13 @@ export function resizeHandler(event, root) {
   })
   const $parent = $resizer.closest('[data-type="resizable"]')
   const coords = $parent.getCoords()
+
   const elArrCol = resize === 'col' ?
       root.findAll(`[data-col="${$parent.data.col}"`)
       : null
   let delta = 0
   let value = 0
+  console.log($parent.data.col)
 
   document.onmousemove = e => {
     if (resize === 'col') {
